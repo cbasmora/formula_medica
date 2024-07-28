@@ -1,19 +1,23 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 40px auto;
     padding: 0;
-    background: url('http://192.168.1.250:8080/devolucion_farmacia/img/fondo-medico-azul.png') no-repeat center center fixed; /* Fondo con imagen */
-    background-size: cover; /* Ajusta la imagen al 100% del fondo */
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.2), 
+        rgba(0, 0, 0, 0.2)
+    ), url('http://192.168.1.250:8080/devolucion_farmacia/img/fondo-medico-azul.png') no-repeat center center fixed;
+    background-size: cover;
     position: relative;
     z-index: 1;
 }
+
 .container {
     max-width: 80%;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow:10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 h1 {
     text-align: center;
