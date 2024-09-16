@@ -15,9 +15,14 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Consulta para obtener los medicamentos
-$sql = "SELECT nombre_medicamento AS name, presentacion AS form FROM medicamentos";
+// Consulta para obtener los medicamentos que no están suspendidos
+$sql = "SELECT nombre_medicamento AS name, presentacion AS form FROM medicamentos WHERE suspendido = 0";
 $result = $conn->query($sql);
+
+// Verificar si la consulta tuvo éxito
+if (!$result) {
+    die("Error en la consulta: " . $conn->error);
+}
 
 // Crear un array para almacenar los resultados
 $medicamentos = array();
